@@ -1,0 +1,10 @@
+@model examen.Models.Transaccion 
+
+<form asp-action="Registrar" method="post">
+    <div>
+        <label>Remitente:</label>
+        <input asp-for="Remitente" />
+    </div>
+    <!-- Campos para el resto de la información -->
+    <button type="submit">Enviar</button>
+</form>
