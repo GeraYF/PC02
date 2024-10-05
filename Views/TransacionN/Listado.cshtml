@@ -1,0 +1,37 @@
+@model IEnumerable<examen.Models.Transaccion>
+
+<h2>Listado de Transacciones</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Remitente</th>
+            <th>Destinatario</th>
+            <th>País Origen</th>
+            <th>País Destino</th>
+            <th>Monto Enviado</th>
+            <th>Tasa de Cambio</th>
+            <th>Monto Final</th>
+            <th>Estado</th>
+            <th>Moneda</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var transaccion in Model)
+        {
+            <tr>
+                <td>@transaccion.Id</td>
+                <td>@transaccion.Remitente</td>
+                <td>@transaccion.Destinatario</td>
+                <td>@transaccion.PaisOrigen</td>
+                <td>@transaccion.PaisDestino</td>
+                <td>@transaccion.MontoEnviado</td>
+                <td>@transaccion.TasaCambio</td>
+                <td>@transaccion.MontoFinal</td>
+                <td>@transaccion.Estado</td>
+                <td>@transaccion.Moneda</td>
+            </tr>
+        }
+    </tbody>
+</table>
